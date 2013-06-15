@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata minClientVersion="1.0">
+    <id>MVC4.Paging</id>
+    <version>1.0.0</version>
+    <title>MVC 4 Paging</title>
+    <authors>Bhaumik</authors>
+    <owners>Bhaumik</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MVC 4 Paging with bootstrap or without bootstrap design also have different optons like ItemTexts, TooltipTitles, Size, Alignment, IsShowControls</description>
+    <summary>MVC 4 Paging bootstrap with ajax or without ajax and with form filter</summary>
+    <tags>MVC 4 Paging,Paging,MVC Paging bootstrap</tags>
+  </metadata>
+</package>
