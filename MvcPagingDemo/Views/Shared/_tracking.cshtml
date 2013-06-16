@@ -8,7 +8,22 @@
 
     ga('create', 'UA-41777706-1', 'mvcpaging.apphb.com');
     ga('send', 'pageview');
-
+    $('.nuget-badge').live('click', function () {
+        ga('send', {
+            'hitType': 'event',          // Required.
+            'eventCategory': 'button',   // Required.
+            'eventAction': 'click',      // Required.
+            'eventLabel': 'Nuget'
+        });
+    });
+    $('#boxdownload').live('click', function () {
+        ga('send', {
+            'hitType': 'event',          // Required.
+            'eventCategory': 'button',   // Required.
+            'eventAction': 'click',      // Required.
+            'eventLabel': 'Demo Download'
+        });
+    });
 </script>
-<script type="text/javascript">    var addthis_config = { "data_track_addressbar": true };</script>
+<script type="text/javascript">    var addthis_config = { "data_track_addressbar": false };</script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51bca53d74788818"></script>
