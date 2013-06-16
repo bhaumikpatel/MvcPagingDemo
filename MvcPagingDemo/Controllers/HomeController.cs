@@ -87,5 +87,11 @@ namespace MvcPagingDemo.Controllers
             return View(employees);
         }
 
+        public ActionResult Document()
+        {
+
+            return View();
+        }
+
     }
 }

@@ -24,6 +24,14 @@
             'eventLabel': 'Demo Download'
         });
     });
+    $('#nuget-link').live('click', function () {
+        ga('send', {
+            'hitType': 'event',          // Required.
+            'eventCategory': 'a[href=nuget-link]',   // Required.
+            'eventAction': 'click',      // Required.
+            'eventLabel': 'Nuget Visit'
+        });
+    });
 </script>
 <script type="text/javascript">    var addthis_config = { "data_track_addressbar": false };</script>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51bca53d74788818"></script>

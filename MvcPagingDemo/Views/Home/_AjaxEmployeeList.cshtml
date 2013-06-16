@@ -51,10 +51,11 @@
                 TotalItemCount = Model.TotalItemCount,
                 CurrentPage = Model.PageNumber,
                 ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous", Page = "P" },
-                TooltipTitles = new TooltipTitles() { Next = "Next page", Previous = "Previous page", Page = "Page" },
+                TooltipTitles = new TooltipTitles() { Next = "Next page", Previous = "Previous page", Page = "Go to page {0}.", First = "Go To First Page", Last = "Go To Last Page" },
                 Size = Size.normal,
                 Alignment = Alignment.centered,
-                IsShowControls = true
+                IsShowControls = true,
+                IsShowFirstLast = true
             },
             new AjaxOptions
             {
@@ -63,4 +64,7 @@
                 OnSuccess = "successPaging",
                 OnFailure = "failurePaging"
             }, new { controller = "Home", action = "Index", employee_name = ViewData["employee_name"] }))
+    <div class="well">
+        Showing <span class="badge badge-success">@Model.ItemStart</span> to <span class="badge badge-success">@Model.ItemEnd</span>
+        of <span class="badge badge-info">@Model.TotalItemCount</span> entries</div>
 </div>
