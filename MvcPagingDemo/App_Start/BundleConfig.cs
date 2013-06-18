@@ -45,14 +45,16 @@ namespace MvcPagingDemo
                "~/Scripts/bootstrap.js",
                "~/Scripts/jquery.validate.js",
                "~/scripts/jquery.validate.unobtrusive.js",
-               "~/Scripts/jquery.validate.unobtrusive-custom-for-bootstrap.js"
+               "~/Scripts/jquery.validate.unobtrusive-custom-for-bootstrap.js",
+               "~/Scripts/prettify.js"
                ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
                 "~/Content/body.css",
                 "~/Content/bootstrap-responsive.css",
-                "~/Content/bootstrap-mvc-validation.css"
+                "~/Content/bootstrap-mvc-validation.css",
+                "~/Content/prettify.css"
                 ));
         }
     }

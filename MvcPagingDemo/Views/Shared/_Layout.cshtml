@@ -22,6 +22,9 @@
             width: auto;
             z-index: 3;
         }
+        .option-value { color: rgb(51, 135, 191);}
+        .key { color:blue; }
+        .string {color: #A31515;}
     </style>
 </head>
 <body>
@@ -84,6 +87,7 @@
         $(function () {
             $('a').tooltip();
         });
+        addEventListener('load', function (event) { prettyPrint() }, false);
     </script>
 </body>
 </html>
