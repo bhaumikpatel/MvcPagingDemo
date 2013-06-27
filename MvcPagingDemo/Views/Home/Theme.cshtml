@@ -1,0 +1,192 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Theme</title>
+    <link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        body
+        {
+            background: #F6F6F6;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #333;
+            padding: 0;
+            margin: 0;
+        }
+        /* ul
+        {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }*/
+        .container
+        {
+            overflow: hidden;
+            width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .theme-title
+        {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            line-height: 1.5;
+            font-weight: bold;
+        }
+        .black
+        {
+            padding: 20px 20px 15px 20px;
+            background: rgb(68, 68, 68);
+            border: 1px solid rgb(51, 51, 51);
+            border-radius: 2px;
+            display: block;
+        }
+        .clear
+        {
+            clear: both;
+        }
+    </style>
+    <link href="~/Content/icon.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/paging.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>
+                CSS Themes @Html.ActionLink("MVC 4 Paging With Bootstrap", "Index", "Home")
+            </h1>
+        </div>
+        <hr />
+        <div>
+            <div class="theme-title">
+                light-theme
+            </div>
+            <div>
+                <div class="pagination pagination-normal pagination-centered light-theme">
+                    <ul>
+                        <li class="active first"><span>First</span></li>
+                        <li class="active previous"><span>Previous</span></li>
+                        <li class="active"><span>P1</span></li>
+                        <li><a href="/?page=1" title="Go to page 2.">P2</a></li>
+                        <li><a href="/?page=1" title="Go to page 3.">P3</a></li>
+                        <li><a href="/?page=3" title="Go to page 4.">P4</a></li>
+                        <li><a href="/?page=5" title="Go to page 5.">P5</a></li>
+                        <li class="disabled"><span>...</span></li>
+                        <li class="next"><a href="/?page=3" title="Next page">Next</a></li>
+                        <li class="last"><a href="/?page=40" title="Go To Last Page">Last</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div>
+            <div class="theme-title">
+                dark-theme
+            </div>
+            <div class="black">
+                <div class="pagination pagination-normal pagination-centered dark-theme">
+                    <ul>
+                        <li class="active first"><span>First</span></li>
+                        <li class="active previous"><span>Previous</span></li>
+                        <li class="active"><span>P1</span></li>
+                        <li><a href="/?page=1" title="Go to page 2.">P2</a></li>
+                        <li><a href="/?page=1" title="Go to page 3.">P3</a></li>
+                        <li><a href="/?page=3" title="Go to page 4.">P4</a></li>
+                        <li><a href="/?page=5" title="Go to page 5.">P5</a></li>
+                        <li class="disabled"><span>...</span></li>
+                        <li class="next"><a href="/?page=3" title="Next page">Next</a></li>
+                        <li class="last"><a href="/?page=40" title="Go To Last Page">Last</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div>
+            <div class="theme-title">
+                compact-theme
+            </div>
+            <div>
+                <div class="pagination pagination-normal pagination-centered compact-theme">
+                    <ul>
+                        <li class="active first"><span>First</span></li>
+                        <li class="active previous"><span>Previous</span></li>
+                        <li class="active"><span>P1</span></li>
+                        <li><a href="/?page=1" title="Go to page 2.">P2</a></li>
+                        <li><a href="/?page=1" title="Go to page 3.">P3</a></li>
+                        <li><a href="/?page=3" title="Go to page 4.">P4</a></li>
+                        <li><a href="/?page=5" title="Go to page 5.">P5</a></li>
+                        <li class="disabled"><span>...</span></li>
+                        <li class="next"><a href="/?page=3" title="Next page">Next</a></li>
+                        <li class="last"><a href="/?page=40" title="Go To Last Page">Last</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div>
+            <div class="theme-title">
+                green-round-theme
+            </div>
+            <div>
+                <div class="pagination pagination-normal pagination-centered green-round-theme">
+                    <ul>
+                        <li class="active first"><span>First</span></li>
+                        <li class="active previous"><span>Previous</span></li>
+                        <li class="active"><span>P1</span></li>
+                        <li><a href="/?page=1" title="Go to page 2.">P2</a></li>
+                        <li><a href="/?page=1" title="Go to page 3.">P3</a></li>
+                        <li><a href="/?page=3" title="Go to page 4.">P4</a></li>
+                        <li><a href="/?page=5" title="Go to page 5.">P5</a></li>
+                        <li class="disabled"><span>...</span></li>
+                        <li class="next"><a href="/?page=3" title="Next page">Next</a></li>
+                        <li class="last"><a href="/?page=40" title="Go To Last Page">Last</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div>
+            <div class="theme-title">
+                metro-theme
+            </div>
+            <div>
+                <div class="pagination pagination-normal pagination-centered metro-theme">
+                    <ul>
+                        <li class="active first"><span><i class="icon-backward"></i></span></li>
+                        <li class="active previous"><span><i class="icon-chevron-left"></i></span></li>
+                        <li class="active"><span>1</span></li>
+                        <li><a href="/?page=1" title="Go to page 2.">2</a></li>
+                        <li><a href="/?page=1" title="Go to page 3.">3</a></li>
+                        <li><a href="/?page=3" title="Go to page 4.">4</a></li>
+                        <li><a href="/?page=5" title="Go to page 5.">5</a></li>
+                        <li class="disabled"><span>...</span></li>
+                        <li class="next"><a href="/?page=3" title="Next page"><i class="icon-chevron-right">
+                        </i></a></li>
+                        <li class="last"><a href="/?page=40" title="Go To Last Page"><i class="icon-forward">
+                        </i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        <hr />
+        </div>
+        <div id="footer">
+            <div class="">
+                <p class="muted credit">
+                    <i class="icon-globe"></i>&nbsp;<a href="http://mvcpaging.apphb.com/">mvcpaging.apphb.com</a>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("_tracking")
+</body>
+</html>

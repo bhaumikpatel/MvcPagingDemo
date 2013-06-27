@@ -2,26 +2,18 @@
 @model IPagedList<MvcPagingDemo.Models.Employee>
 @{
     ViewBag.Title = "MVC 4 Paging Without Ajax Bootstrap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="row-fluid">
-    <div class="span6">
+    <div class="span8">
         <h2>
-            Paging With Bootstrap In MVC 4
+            Paging With Area's In MVC 4
         </h2>
     </div>
-    <div class="span3">
+    <div class="span4">
         <div class="alert alert-info">
-            The pager also supports area's. @Html.ActionLink("Paging in an area", "Paging", "Home", new { Area = "AreaOne" }, new { @class = "btn btn-success" })</div>
-    </div>
-    <div class="span3">
-        <!-- AddThis Button BEGIN -->
-        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-            <a class="addthis_button_facebook"></a><a class="addthis_button_twitter"></a><a class="addthis_button_pinterest_share">
-            </a><a class="addthis_button_google_plusone_share"></a><a class="addthis_button_compact">
-            </a><a class="addthis_counter addthis_bubble_style"></a>
+            @Html.ActionLink("Go back to the root area", "Paging", "Home", new { area = String.Empty }, new { @class = "btn" })
         </div>
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
-        <!-- AddThis Button END -->
     </div>
 </div>
 <div class="clearfix">
@@ -83,17 +75,14 @@
                 PageSize = Model.PageSize,
                 TotalItemCount = Model.TotalItemCount,
                 CurrentPage = Model.PageNumber,
-                ItemTexts = new ItemTexts() { Next = "Newer →", Previous = "← Older" },
-                TooltipTitles = new TooltipTitles() { Next = "Next {0}", Previous = "Previous {0}" },
+                ItemTexts = new ItemTexts() { Next = "Next", Previous = "Previous" },
+                TooltipTitles = new TooltipTitles() { Next = "Next page {0}", Previous = "Previous page {0}", Page = "Go to page {0}" },
                 Size = Size.normal,
                 Alignment = Alignment.centered,
                 IsShowControls = true,
-                IsShowFirstLast = false,
-                IsShowPages = false
+                IsShowFirstLast = true,
+                IsShowPages = true
             }, new { employee_name = ViewData["employee_name"] }))
-        <div class="well">
-            Showing <span class="badge badge-success">@Model.ItemStart</span> to <span class="badge badge-success">@Model.ItemEnd</span>
-            of <span class="badge badge-info">@Model.TotalItemCount</span> entries</div>
     </div>
 }
 <div>
@@ -108,75 +97,69 @@
         <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
             mso-layout-grid-align: none; text-autospace: none">
             <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp; </span><span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;</span><span
-                    class="GramE"><span style="color: blue">new</span></span> <span style="color: #2B91AF">
-                        Options</span><o:p></o:p></span></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">
+                    <span style="color: blue">new</span></span> <span style="color: #2B91AF">Options</span><o:p></o:p></span></p>
         <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
             mso-layout-grid-align: none; text-autospace: none">
             <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>{<o:p></o:p></span></p>
         <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
             mso-layout-grid-align: none; text-autospace: none">
             <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">PageSize</span>
-                = <span class="SpellE">Model.PageSize</span>,<o:p></o:p></span></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span><span class="SpellE">PageSize</span> = <span class="SpellE">Model.PageSize</span>,<o:p></o:p></span></p>
         <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
             mso-layout-grid-align: none; text-autospace: none">
             <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TotalItemCount</span>
-                = <span class="SpellE">Model.TotalItemCount</span>,<o:p></o:p></span></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span><span class="SpellE">TotalItemCount</span> = <span class="SpellE">Model.TotalItemCount</span>,<o:p></o:p></span></p>
         <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
             mso-layout-grid-align: none; text-autospace: none">
             <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">CurrentPage</span>
-                = <span class="SpellE">Model.PageNumber</span>,<o:p></o:p></span></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span><span class="SpellE">CurrentPage</span> = <span class="SpellE">Model.PageNumber</span>,<o:p></o:p></span></p>
         <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
             mso-layout-grid-align: none; text-autospace: none">
             <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ItemTexts</span>
-                = <span style="color: blue">new</span> <span class="SpellE"><span class="GramE"><span
-                    style="color: #2B91AF">ItemTexts</span></span></span><span class="GramE">(</span>)
-                { Next = <span style="color: #A31515">"Newer →"</span>, Previous = <span style="color: #A31515">
-                    "← Older"</span> },<o:p></o:p></span></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span><span class="SpellE">ItemTexts</span> = <span style="color: blue">new</span>
+                <span class="SpellE"><span class="GramE"><span style="color: #2B91AF">ItemTexts</span></span></span><span
+                    class="GramE">(</span>) { Next = <span style="color: #A31515">"Next"</span>,
+                Previous = <span style="color: #A31515">"Previous"</span> },<o:p></o:p></span></p>
         <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
             mso-layout-grid-align: none; text-autospace: none">
             <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TooltipTitles</span>
-                = <span style="color: blue">new</span> <span class="SpellE"><span class="GramE"><span
-                    style="color: #2B91AF">TooltipTitles</span></span></span><span class="GramE">(</span>)
-                { Next = <span style="color: #A31515">"Next {0}"</span>, Previous = <span style="color: #A31515">
-                    "Previous {0}"</span> },<o:p></o:p></span></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span><span class="SpellE">TooltipTitles</span> = <span style="color: blue">new</span>
+                <span class="SpellE"><span class="GramE"><span style="color: #2B91AF">TooltipTitles</span></span></span><span
+                    class="GramE">(</span>) { Next = <span style="color: #A31515">"Next page {0}"</span>,
+                Previous = <span style="color: #A31515">"Previous page {0}"</span>, Page = <span
+                    style="color: #A31515">"Go to page {0}"</span> },<o:p></o:p></span></p>
         <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
             mso-layout-grid-align: none; text-autospace: none">
             <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Size = <span class="SpellE">
-                    <span style="color: #2B91AF">Size</span>.normal</span>,<o:p></o:p></span></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>Size = <span class="SpellE"><span style="color: #2B91AF">Size</span>.normal</span>,<o:p></o:p></span></p>
         <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
             mso-layout-grid-align: none; text-autospace: none">
             <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Alignment = <span class="SpellE">
-                    <span style="color: #2B91AF">Alignment</span>.centered</span>,<o:p></o:p></span></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </span>Alignment = <span class="SpellE"><span style="color: #2B91AF">Alignment</span>.centered</span>,<o:p></o:p></span></p>
         <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
             mso-layout-grid-align: none; text-autospace: none">
             <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">IsShowControls</span>
-                = <span style="color: blue">true</span>,<o:p></o:p></span></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun: yes">
+                    &nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SpellE">IsShowControls</span> =
+                <span style="color: blue">true</span><o:p></o:p></span></p>
         <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
             mso-layout-grid-align: none; text-autospace: none">
             <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">IsShowFirstLast</span>
-                = <span style="color: blue">false</span>,<o:p></o:p></span></p>
-        <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
-            mso-layout-grid-align: none; text-autospace: none">
-            <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">IsShowPages</span>
-                = <span style="color: blue">false</span><o:p></o:p></span></p>
-        <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; line-height: normal;
-            mso-layout-grid-align: none; text-autospace: none">
-            <span style="font-size: 9.5pt; font-family: Consolas"><span style="mso-spacerun: yes">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}, <span style="color: blue">new</span> <span
-                    class="GramE">{ <span class="SpellE">employee</span></span><span class="SpellE">_name</span>
-                = <span class="SpellE">ViewData</span>[<span style="color: #A31515">"<span class="SpellE">employee_name</span>"</span>]
-                }))<o:p></o:p></span></p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>}, <span
+                    style="color: blue">new</span> <span class="GramE">{ <span class="SpellE">employee</span></span><span
+                        class="SpellE">_name</span> = <span class="SpellE">ViewData</span>[<span style="color: #A31515">"<span
+                            class="SpellE">employee_name</span>"</span>] }))<o:p></o:p></span></p>
+        <p class="MsoNormal">
+            <o:p>&nbsp;</o:p>
+        </p>
     </div>
 </div>

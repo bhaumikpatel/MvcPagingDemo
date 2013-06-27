@@ -102,6 +102,22 @@
                     </tr>
                     <tr>
                         <td>
+                            ItemIcon
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                        </td>
+                        <td>
+                            You can add icon <code>&lt;i class=&quot;icon-chevron-right&quot;&gt;&lt;/i&gt;</code>
+                            with text. Default icon value null.
+                            <pre>ItemIcon = <span class="key">new</span> <span class="option-value">ItemIcon</span>() { First = <span
+                                class="string">"icon-backward"</span>, Previous = <span class="string">"icon-chevron-left"</span>, Next = <span
+                                    class="string">"icon-chevron-right"</span>, Last = <span class="string">"icon-forward"</span>  }</pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             TooltipTitles
                         </td>
                         <td>
@@ -207,8 +223,8 @@
     &lt;ul&gt;
         &lt;li class=&quot;first&quot;&gt;&lt;a href=&quot;/?page=1&quot; title=&quot;Go To First Page&quot;&gt;First&lt;/a&gt;&lt;/li&gt;
         &lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/?page=1&quot; title=&quot;Previous Page&quot;&gt;Previous&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;span&gt;P1&lt;/span&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;/?page=1&quot; title=&quot;Go to page 2.&quot;&gt;P2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;/?page=1&quot; title=&quot;Go to page 1.&quot;&gt;P1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;/?page=2&quot; title=&quot;Go to page 2.&quot;&gt;P2&lt;/a&gt;&lt;/li&gt;
         &lt;li class=&quot;active&quot;&gt;&lt;span&gt;P3&lt;/span&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;/?page=3&quot; title=&quot;Go to page 4.&quot;&gt;P4&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;/?page=5&quot; title=&quot;Go to page 5.&quot;&gt;P5&lt;/a&gt;&lt;/li&gt;
@@ -216,6 +232,11 @@
         &lt;li class=&quot;last&quot;&gt;&lt;a href=&quot;/?page=40&quot; title=&quot;Go To Last Page&quot;&gt;Last&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;</pre>
+        </div>
+        <div id="themes">
+            <h3>
+                CSS Theme</h3>
+            @Html.ActionLink("Theme", "Theme", null, new { @class = "btn btn-success", target = "_blanck" })
         </div>
     </div>
 </div>

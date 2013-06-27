@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using MvcPagingDemo.Models;
 using MvcPaging;
 
-namespace MvcPagingDemo.Controllers
+namespace MvcPagingDemo.Areas.AreaOne.Controllers
 {
     public class HomeController : Controller
     {
@@ -85,17 +85,6 @@ namespace MvcPagingDemo.Controllers
             }
 
             return View(employees);
-        }
-
-        public ActionResult Document()
-        {
-
-            return View();
-        }
-
-        public ActionResult Theme()
-        {
-            return View();
         }
 
     }

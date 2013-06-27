@@ -83,6 +83,14 @@
             </example>
             </summary>
         </member>
+        <member name="P:MvcPaging.Options.ItemIcon">
+            <summary>
+            Set Paging Next, Previous, Page icon class
+            <example>
+            <code><para>ItemIcon = new ItemIcon() { Next = "icon-chevron-right", Previous = "icon-chevron-left" }</para></code>
+            </example>
+            </summary>
+        </member>
         <member name="P:MvcPaging.Options.TooltipTitles">
             <summary>
             Set title tooltip for next, previous and page link
@@ -132,6 +140,36 @@
         <member name="P:MvcPaging.ItemTexts.Last">
             <summary>
             Default value Last
+            </summary>
+        </member>
+        <member name="T:MvcPaging.ItemIcon">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:MvcPaging.ItemIcon.Next">
+            <summary>
+            Default value string.Empty
+            </summary>
+        </member>
+        <member name="P:MvcPaging.ItemIcon.Previous">
+            <summary>
+            Default value string.Empty
+            </summary>
+        </member>
+        <member name="P:MvcPaging.ItemIcon.Page">
+            <summary>
+            Default value string.Empty
+            </summary>
+        </member>
+        <member name="P:MvcPaging.ItemIcon.First">
+            <summary>
+            Default value string.Empty
+            </summary>
+        </member>
+        <member name="P:MvcPaging.ItemIcon.Last">
+            <summary>
+            Default value string.Empty
             </summary>
         </member>
         <member name="T:MvcPaging.TooltipTitles">

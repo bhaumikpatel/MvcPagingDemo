@@ -121,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Areas\AreaOne\AreaOneAreaRegistration.cs" />
+    <Compile Include="Areas\AreaOne\Controllers\Default1Controller.cs" />
+    <Compile Include="Areas\AreaOne\Controllers\HomeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -138,10 +141,12 @@
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\icon.css" />
     <Content Include="Content\images\Error\NotFound.jpg" />
     <Content Include="Content\images\Error\ServerError.jpg" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\paging.css" />
     <Content Include="Content\prettify.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -250,6 +255,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Document.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\AreaOne\Views\Home\Index.cshtml" />
+    <Content Include="Areas\AreaOne\Views\Home\Paging.cshtml" />
+    <Content Include="Areas\AreaOne\Views\Home\_AjaxEmployeeList.cshtml" />
+    <Content Include="Areas\AreaOne\Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\AreaOne\Models\" />
+    <Folder Include="Areas\AreaOne\Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Theme.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
