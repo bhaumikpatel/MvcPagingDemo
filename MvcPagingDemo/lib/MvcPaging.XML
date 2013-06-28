@@ -112,6 +112,11 @@
             Set bool value for 1,2,3,4,5 Paging list, Default value is true
             </summary>
         </member>
+        <member name="P:MvcPaging.Options.CssClass">
+            <summary>
+            Set css class for custom design
+            </summary>
+        </member>
         <member name="T:MvcPaging.ItemTexts">
             <summary>
             
